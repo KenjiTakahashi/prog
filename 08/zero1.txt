@@ -1,0 +1,10 @@
+1.1) 2*2
+1.2) gcd 137 542
+1.3) :t 123
+1.4) :?
+1.5) :set +s +t
+1.6) :show bindings
+2.1) let silnia n=if n==0 then 1 else n*silnia(n-1)
+2.2) Wynik ostatniego wykonania funkcji.
+3) pierwsze jest gorliwe (wykona sie od razu), drugie leniwe (zwiaze x z wyrazeniem i wykona je w momencie uzycia)
+4) :m List

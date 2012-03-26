@@ -1,0 +1,9 @@
+flatten2(X,Y):-
+	flatten2(X,[],Y).
+flatten2([],A,A).
+flatten2([H|T],A,R):-
+	flatten2(T,A,S),
+	flatten2(H,S,R),!.
+flatten2(X,A,[X|A]):-
+	atomic(X),
+	X\=[].

@@ -1,0 +1,19 @@
+insert(L,E,R):-
+    insert(L,E,[],R,0).
+insert([],E,L,R,0):-
+    reverse([E|L],R).
+insert([],_,L,R,1):-
+    reverse(L,R).
+insert([H|T],E,L,R,N):-
+    H<E,
+    insert(T,E,[H|L],R,N).
+insert([H|T],E,L,R,_):-
+    E=<H,
+    insert(T,E,[H,E|L],R,1).
+
+ins_sort(L,W):-
+    ins_sort(L,[],W).
+ins_sort([],R,R):-!.
+ins_sort([H|T],L,R):-
+    insert(L,H,W),
+    ins_sort(T,W,R).
